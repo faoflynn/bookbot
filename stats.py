@@ -17,6 +17,7 @@ def sort_on(items):
 
 def sort_letters(dict):
     list_of_letters = []
-    for character, count in dict:
-        list_of_letters.append({"char": character, "num": count})
+    for character in dict:
+        list_of_letters.append({"char": character, "num": dict[character]})
     list_of_letters.sort(reverse=True, key=sort_on)
+    return list_of_letters
